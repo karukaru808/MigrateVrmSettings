@@ -1,0 +1,2 @@
+# MigrateVrmSettings
+VRMの設定を古いモデルから新しいモデルに移行してくれるヤツ
