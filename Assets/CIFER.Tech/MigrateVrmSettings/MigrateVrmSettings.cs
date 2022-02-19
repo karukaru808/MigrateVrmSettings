@@ -79,7 +79,7 @@ namespace CIFER.Tech.MigrateVrmSettings
                 var newFirstPerson = data.NewVrm.GetComponent<VRMFirstPerson>();
 
                 newFirstPerson.FirstPersonBone =
-                    CiferTechUtils.FindSameNameTransformInChildren(oldFirstPerson.FirstPersonBone.name,
+                    CiferTechUnityUtils.FindSameNameTransformInChildren(oldFirstPerson.FirstPersonBone.name,
                         newFirstPerson.transform);
                 newFirstPerson.FirstPersonOffset = oldFirstPerson.FirstPersonOffset;
 
@@ -152,13 +152,13 @@ namespace CIFER.Tech.MigrateVrmSettings
                 var oldSpringBones = data.OldVrm.GetComponentsInChildren<VRMSpringBone>();
                 var oldColliders = data.OldVrm.GetComponentsInChildren<VRMSpringBoneColliderGroup>();
 
-                CiferTechUtils.DeleteExistSetting<VRMSpringBone>(newSecondaryTransform, false);
-                CiferTechUtils.DeleteExistSetting<VRMSpringBoneColliderGroup>(data.NewVrm.transform, true);
+                CiferTechUnityUtils.DeleteExistSetting<VRMSpringBone>(newSecondaryTransform, false);
+                CiferTechUnityUtils.DeleteExistSetting<VRMSpringBoneColliderGroup>(data.NewVrm.transform, true);
 
                 foreach (var oldCollider in oldColliders)
                 {
                     var targetTransform =
-                        CiferTechUtils.FindSameNameTransformInChildren(oldCollider.name, data.NewVrm.transform);
+                        CiferTechUnityUtils.FindSameNameTransformInChildren(oldCollider.name, data.NewVrm.transform);
 
                     if (targetTransform == null)
                         continue;
@@ -179,21 +179,21 @@ namespace CIFER.Tech.MigrateVrmSettings
 
                     if (oldSpringBone.m_center != null)
                         newSpringBone.m_center =
-                            CiferTechUtils.FindSameNameTransformInChildren(oldSpringBone.m_center.name,
+                            CiferTechUnityUtils.FindSameNameTransformInChildren(oldSpringBone.m_center.name,
                                 data.NewVrm.transform);
 
                     newSpringBone.RootBones = new List<Transform>();
                     foreach (var oldRootBone in oldSpringBone.RootBones)
                     {
                         newSpringBone.RootBones.Add(
-                            CiferTechUtils.FindSameNameTransformInChildren(oldRootBone.name, data.NewVrm.transform));
+                            CiferTechUnityUtils.FindSameNameTransformInChildren(oldRootBone.name, data.NewVrm.transform));
                     }
 
                     newSpringBone.m_hitRadius = oldSpringBone.m_hitRadius;
 
                     newSpringBone.ColliderGroups = oldSpringBone.ColliderGroups
                         .Select(oldCollider =>
-                            CiferTechUtils.FindSameNameTransformInChildren(oldCollider.name, data.NewVrm.transform)
+                            CiferTechUnityUtils.FindSameNameTransformInChildren(oldCollider.name, data.NewVrm.transform)
                                 ?.GetComponent<VRMSpringBoneColliderGroup>())
                         .Where(targetCollider => targetCollider != null).ToArray();
                 }
