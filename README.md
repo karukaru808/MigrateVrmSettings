@@ -20,7 +20,7 @@ VRMモデルの元となったモデルを更新したとき（例えば、ウ�
 6. 設定が移行されたVRMモデルを出力し直す。
 
 ## 動作環境
-- Unity2018.4.20f1
+- Unity2019.4.31f1
   - Scripting Runtime Version Experimental(.NET 4.6 Equivaient)
 - [UniVRM](https://github.com/vrm-c/UniVRM)
 
@@ -29,7 +29,7 @@ VRMモデルの元となったモデルを更新したとき（例えば、ウ�
 メタデータ、ブレンドシェイプ（表情）、FirstPerson、LookAtBoneApplyer、マテリアル／テクスチャ、SpringBone、を移行します。
 
 ## ライセンス
-本リポジトリは[MITライセンス](LICENSE)の下で公開しています。  
+本リポジトリは[MITライセンス](https://github.com/karukaru808/MigrateVrmSettings/blob/master/LICENSE)の下で公開しています。  
 
 本リポジトリにはMITライセンスの下に提供されている[UniVRM](https://github.com/vrm-c/UniVRM/blob/master/LICENSE.txt)が含まれています。  
 これらのコンテンツを利用される場合は、該当リポジトリのライセンスもしくは同梱しているライセンスファイルに従ってください。
