@@ -142,6 +142,42 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.vrmc.gltf": {
+      "version": "https://github.com/vrm-c/UniVRM.git?path=/Assets/UniGLTF#v0.95.1",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.vrmc.vrmshaders": "0.95.1"
+      },
+      "hash": "646573aeff2135f138d24a3d0bb16516a6fa9c1f"
+    },
+    "com.vrmc.univrm": {
+      "version": "https://github.com/vrm-c/UniVRM.git?path=/Assets/VRM#v0.95.1",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.vrmc.vrmshaders": "0.95.1",
+        "com.vrmc.gltf": "0.95.1"
+      },
+      "hash": "646573aeff2135f138d24a3d0bb16516a6fa9c1f"
+    },
+    "com.vrmc.vrm": {
+      "version": "https://github.com/vrm-c/UniVRM.git?path=/Assets/VRM10#v0.95.1",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.vrmc.vrmshaders": "0.95.1",
+        "com.vrmc.gltf": "0.95.1"
+      },
+      "hash": "646573aeff2135f138d24a3d0bb16516a6fa9c1f"
+    },
+    "com.vrmc.vrmshaders": {
+      "version": "https://github.com/vrm-c/UniVRM.git?path=/Assets/VRMShaders#v0.95.1",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "646573aeff2135f138d24a3d0bb16516a6fa9c1f"
+    },
     "nuget.mono-cecil": {
       "version": "0.1.6-preview",
       "depth": 1,
