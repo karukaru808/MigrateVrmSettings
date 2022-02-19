@@ -15,7 +15,7 @@ namespace CIFER.Tech.MigrateVrmSettings
             _isMaterial = true,
             _isSpringBone = true;
 
-        [MenuItem("CIFER.Tech/MigrateVrmSettings")]
+        [MenuItem("CIFER.tech/MigrateVrmSettings")]
         private static void Open()
         {
             var window = GetWindow<MigrateVrmSettingsWindow>("MigrateVrmSettings");
