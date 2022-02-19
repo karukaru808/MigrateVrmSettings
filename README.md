@@ -21,7 +21,6 @@ VRMモデルの元となったモデルを更新したとき（例えば、ウ�
 
 ## 動作環境
 - Unity2019.4.31f1
-  - Scripting Runtime Version Experimental(.NET 4.6 Equivaient)
 - [UniVRM](https://github.com/vrm-c/UniVRM)
 
 ## FAQ
