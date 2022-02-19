@@ -54,10 +54,16 @@ namespace CIFER.Tech.MigrateVrmSettings
                             Index = blendShapeIndex < 0 ? binding.Index : blendShapeIndex, Weight = binding.Weight,
                         }).ToArray();
                     newClips[i].MaterialValues = oldClips[i].MaterialValues;
+
+#if UNITY_EDITOR
                     EditorUtility.SetDirty(newClips[i]);
+#endif
                 }
+
+#if UNITY_EDITOR
                 AssetDatabase.SaveAssets();
                 AssetDatabase.Refresh();
+#endif
             }
 
             #endregion
