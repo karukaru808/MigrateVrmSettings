@@ -1,9 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using CIFER.Tech.Utils;
-using UnityEditor;
 using UnityEngine;
 using VRM;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 namespace CIFER.Tech.MigrateVrmSettings
 {
